@@ -7,7 +7,7 @@ function magicAlgorithm(numLikes, comment, views, shares) {
     // magic!
     if (numLikes >= 10000 && comment.includes("dog") && views >= 100000 && shares >= 100) {
         rank = 1;
-    } else if (numLikes >= 500 && comment.includes("cat") && views >= 20000 && shares >= 25) {
+    } else if (numLikes >= 500 && comment.includes("tiger") && views >= 20000 && shares >= 25) {
         rank = 100;
     } else {
         rank = 1000;
