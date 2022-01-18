@@ -16,20 +16,6 @@ function magicAlgorithm(numLikes, comment, views, shares) {
     }
     return rank;
 }
-/*
-alert("Welcome to Tiktok! Imagive I'm showing you a tiktok video right now");
-let likeCount = Number(prompt("How many likes did this Tiktok video get?"));
-let comment = prompt("What is the most recent comment for this video?");
-let views = Number(prompt("How many views did this video get?"));
-let shares = Number(prompt("How many shares did this video get?"));
-
-// using the two inputs above, pass that into the magic function and return the result
-
-let rankResult = magicAlgorithm(likeCount, comment, views, shares);
-let resultString = "Based off of the magic algorithm, this video's rank is: " + rankResult;
-
-alert(resultString)
-*/
 
 function showUI() {
     // grab values from text boxes
