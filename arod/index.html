@@ -7,21 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Ecosystem</title>
 
+
 </head>
 
-<body style="height: 700px; width: 1000px; border: 1px solid blue;">
+<body style="height: 700px; width: 1100px; border: 1px solid blue;">
+
     <div style="text-align: center;">
         <h1>This is Aaron Rodgers, he is my NFL pet!</h1>
         <p>Train, pay, and give Aaron Rodgers good teammates to make him happy and bring a super bowl victory!</p>
 
-        <img src="images/happy-pikachu.png" alt="" height="350px" width="325px">
+        <img src="images/arod-fist.jpg" alt="" height="350px" width="550px">
+        <p id="rodgers-condition">Aaron Rodgers is happy!</p>
     </div>
-    <h3>Aaron Rodgers Skill Meter</h3>
-    <meter id="belly-meter" min="0" max="10" value="5"></meter>
-    <p id="belly-paragraph">5</p>
-    <button id="belly-button">Feed Pikachu!</button>
-    <!---add state, meter, paragraph, button (e.g. Pikachu's happiness)--->
 
+    <div style="position: absolute; top:525px; left: 25px;">
+        <h3>Aaron Rodgers Skill Meter</h3>
+        <meter id="accuracy-meter" min="0" max="10" value="5"></meter>
+        <p id="accuracy-paragraph">5</p>
+        <button id="accuracy-button" onclick="trainRodgers()">Train Aaron Rodgers!</button>
+    </div>
+    <div style="position: absolute; top: 525px; left: 350px;">
+        <h3>Aaron Rodgers Bank Account</h3>
+        <meter id="money-meter" min="0" max="10" value="5"></meter>
+        <p id="money-paragraph">5</p>
+        <button id="money-button" onclick="payRodgers()">Pay Aaron Rodgers!</button>
+    </div>
+    <div style="position: absolute; top: 525px; left: 700px;">
+        <h3>Aaron Rodgers Teammate Level</h3>
+        <meter id="teammate-meter" min="0" max="10" value="5"></meter>
+        <p id="teammate-paragraph">5</p>
+        <button id="teammate-button" onclick="teammatesRodgers()">Increase the capabilities of Aaron Rodgers' teammates!!</button>
+    </div>
     <script src="js/rodgers.js"></script>
 </body>
 
