@@ -102,7 +102,7 @@ function refreshUI() {
         arodParagraph.innerHTML = "I am retired and very happy now! :)";
     } else { // default image and state
         arodImg.src = "images/arod-fist.jgp";
-        arodParagraph.innerHTML = "I have no feelings towards anyone or anything."
+        arodParagraph.innerHTML = "I have no feelings towards anyone or anything, even life."
     }
     if (sum === 0) {
         alert("Aaron Rodgers died... better luck keeping him alive next time!");
