@@ -87,13 +87,13 @@ function refreshUI() {
         arodParagraph.innerHTML = "We won the super bowl!";
     } else if (sum < 27 && sum >= 22) {
         arodImg.src = "images/happy-arod.jpg";
-        arodParagraph.innerHTML = "He is happy with the Packers";
+        arodParagraph.innerHTML = "I am very happy with the Packers";
     } else if (sum < 22 && sum >= 16) {
         arodImg.src = "images/arod-fist.jpg";
-        arodParagraph.innerHTML = "Aaron Rodgers has no feelings towards anyone or anything.";
+        arodParagraph.innerHTML = "I have no feelings towards anyone or anything.";
     } else if (sum < 16 && sum >= 10) {
         arodImg.src = "images/mad-arod.jpg";
-        arodParagraph.innerHTML = "He is mad at the packers...";
+        arodParagraph.innerHTML = "I am mad at the packers...";
     } else if (sum < 10 && sum >= 5) {
         arodImg.src = "images/arod-money.jpg";
         arodParagraph.innerHTML = "I have lots of money and don't really care about how the team does :)";
@@ -102,7 +102,7 @@ function refreshUI() {
         arodParagraph.innerHTML = "I am retired and very happy now! :)";
     } else { // default image and state
         arodImg.src = "images/arod-fist.jgp";
-        arodParagraph.innerHTML = "Aaron Rodgers has no feelings towards anyone or anything."
+        arodParagraph.innerHTML = "I have no feelings towards anyone or anything."
     }
     if (sum === 0) {
         alert("Aaron Rodgers died... better luck keeping him alive next time!");
