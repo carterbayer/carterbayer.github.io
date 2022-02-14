@@ -11,7 +11,7 @@ let playerX = 250;
 let playerY = 250;
 let playerXDir = 0;
 let playerYDir = 0;
-let playerSpeed = 5;
+let playerSpeed = 5.5;
 const PADDLE_WIDTH = 100;
 const PADDLE_HEIGHT = 20;
 
