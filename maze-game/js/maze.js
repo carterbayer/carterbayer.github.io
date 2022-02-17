@@ -1,7 +1,8 @@
 // canvas item
 let myCanvas = document.getElementById("my-canvas");
 let ctx = myCanvas.getContext("2d");
-let ghost = document.getElementById("ghost");
+let cx = document.querySelector("canvas").getContext("2d");
+
 
 // get paragraph items
 let keydownOutput = document.getElementById("keydown-output")
@@ -13,20 +14,10 @@ let playerY = 250;
 let playerXDir = 0;
 let playerYDir = 0;
 let playerSpeed = 5.5;
-const PADDLE_WIDTH = 100;
-const PADDLE_HEIGHT = 20;
+const PADDLE_WIDTH = 40;
+const PADDLE_HEIGHT = 40;
 
 
-// image settings
-const IMG_WIDTH = 40;
-const IMG_HEIGHT = 40;
-
-// ball position and movement
-let ballX = 100;
-let ballY = 100;
-let ballXDir = 5;
-let ballYDir = 5;
-let BALL_RADIUS = 20;
 
 function drawPlayer() {
     ctx.fillRect(playerX, playerY, PADDLE_WIDTH, PADDLE_HEIGHT)
@@ -38,57 +29,26 @@ function movePlayer() {
     //edge check
     if (playerX < 0) {
         playerX = 0;
-    } else if (playerX > 500 - PADDLE_WIDTH) {
-        playerX = 500 - PADDLE_WIDTH;
+    } else if (playerX > 1000 - PADDLE_WIDTH) {
+        playerX = 1000 - PADDLE_WIDTH;
     }
 
     playerY += (playerSpeed * playerYDir);
 }
 
-function drawBall() {
-    ctx.beginPath()
-    ctx.arc(ballX, ballY, BALL_RADIUS, 0, 2 * Math.PI);
-    ctx.fillStyle = "red";
-    ctx.fill();
-}
+function wallOne() {
+    cx.fillRect(800, 75, 20, 350)
+    cx.fillRect(360, 75, 450, 20)
+    cx.fillRect(660, 75, 20, 200)
 
-function drawImage() {
-    ctx.drawImage(ghost, ballX, ballY, IMG_WIDTH, IMG_HEIGHT);
-}
-
-function moveBall() {
-    ballY += ballYDir;
-    ballX += ballXDir;
-}
-
-function checkBallCollision() {
-    // check vertical wall
-    if (ballY > 500 - BALL_RADIUS || (ballY < 0 + BALL_RADIUS)) {
-        ballYDir = -ballYDir;
-    }
-    if (ballX > 500 - BALL_RADIUS || (ballX < 0 + BALL_RADIUS)) {
-        ballXDir = -ballXDir;
-    }
-
-    // check to see if I hit the paddle
-    if (ballX + BALL_RADIUS >= playerX &&
-        ballX - BALL_RADIUS <= playerX + PADDLE_WIDTH &&
-        ballY + BALL_RADIUS >= playerY &&
-        ballY - BALL_RADIUS <= playerY + PADDLE_HEIGHT) {
-        ballYDir = ballYDir * -1.005;
-    }
 
 }
 
 function refreshUI() {
-    ctx.clearRect(0, 0, 500, 500);
+    ctx.clearRect(0, 0, 1000, 1000);
     movePlayer();
     drawPlayer();
-    // animate ball
-    checkBallCollision();
-    moveBall();
-    // drawBall();
-    drawImage();
+    wallOne()
 }
 
 // when key is pressed
@@ -125,6 +85,5 @@ function keyReleased(event) {
         playerYDir = 0;
     }
 }
-
 
 setInterval(refreshUI, 30);
