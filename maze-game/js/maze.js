@@ -13,7 +13,7 @@ let playerX = 250;
 let playerY = 250;
 let playerXDir = 0;
 let playerYDir = 0;
-let playerSpeed = 5.5;
+let playerSpeed = 3;
 const PADDLE_WIDTH = 40;
 const PADDLE_HEIGHT = 40;
 
@@ -37,11 +37,16 @@ function movePlayer() {
 }
 
 function wallOne() {
-    cx.fillRect(800, 75, 20, 350)
-    cx.fillRect(360, 75, 450, 20)
-    cx.fillRect(660, 75, 20, 200)
-
-
+    cx.fillRect(700, 150, 20, 290)
+    cx.fillRect(260, 55, 450, 20)
+    cx.fillRect(560, 55, 20, 200)
+    cx.fillRect(250, 55, 20, 290)
+    cx.fillRect(250, 420, 470, 20)
+    cx.fillRect(260, 155, 200, 20)
+    cx.fillRect(450, 275, 20, 150)
+    cx.fillRect(350, 325, 100, 20)
+    cx.fillRect(550, 320, 150, 20)
+    cx.fillRect(575, 175, 50, 20)
 }
 
 function refreshUI() {
